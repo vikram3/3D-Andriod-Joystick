@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Button.png" type="Texture" id=1]
+[ext_resource path="res://Radius.png" type="Texture" id=2]
+[ext_resource path="res://TouchScreenButton.gd" type="Script" id=3]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 28.0
+
+[node name="HBoxContainer" type="HBoxContainer"]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_top = -40.0
+margin_right = 40.0
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 214, -150 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="Sprite"]
+normal = ExtResource( 1 )
+shape = SubResource( 1 )
+script = ExtResource( 3 )
